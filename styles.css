@@ -1,0 +1,147 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #000; /* Black background */
+  color: #fff; /* White text */
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Header */
+header {
+  background-color: #001f3f; /* Low blue */
+  padding: 1rem;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 1.5rem;
+}
+
+/* Photo Section */
+.photo-section {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.photo-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.photo-section img {
+  width: 100%;
+  max-width: 500px; /* 500x500 as required */
+  height: auto;
+  margin: 1rem 0;
+}
+
+.photo-section p {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+button.apply-now {
+  background-color: red;
+  color: #fff;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+}
+
+button.apply-now:hover {
+  background-color: #cc0000; /* Slightly darker red on hover */
+}
+
+/* How to Apply Section */
+#how-to-apply {
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+#how-to-apply h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+#how-to-apply ol {
+  text-align: left;
+  margin: 0 auto;
+  max-width: 500px;
+  list-style-type: decimal;
+}
+
+#how-to-apply li {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+/* Footer */
+footer {
+  background-color: #001f3f; /* Low blue */
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+footer ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+footer ul li {
+  margin: 0 1rem;
+}
+
+footer ul li a {
+  color: #fff;
+  font-size: 1rem;
+}
+
+footer p {
+  font-size: 0.8rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.2rem;
+  }
+
+  .photo-section h2,
+  #how-to-apply h2 {
+    font-size: 1.5rem;
+  }
+
+  .photo-section p {
+    font-size: 1rem;
+  }
+
+  button.apply-now {
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+  }
+
+  footer ul {
+    flex-direction: column;
+  }
+
+  footer ul li {
+    margin: 0.5rem 0;
+  }
+}
