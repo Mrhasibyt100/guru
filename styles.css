@@ -1,0 +1,155 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Text Styling */
+body {
+    background-color: red;
+    color: black;
+    font-family: Arial, sans-serif;
+    font-size: 16px; /* Base font size */
+}
+
+/* Header Styling */
+header {
+    background-color: black;
+    color: red;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header .logo {
+    max-width: 50px; /* Adjust logo size */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+header h1 {
+    font-size: 2rem; /* Medium size */
+    font-weight: bold;
+}
+
+/* Main Content Styling */
+.main-content {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.hero-image {
+    max-width: 70%;
+    height: auto;
+    margin-bottom: 17px;
+}
+
+h2 {
+    font-size: 1.5rem; /* Medium size */
+    color: black;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1rem; /* Medium size */
+    margin-bottom: 30px;
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Get Started Button */
+.cta-btn {
+    display: inline-block;
+    padding: 20px 40px;
+    background-color: #007bff; /* Blue color */
+    color: white;
+    font-size: 1.5rem; /* Larger text for better visibility */
+    font-weight: bold;
+    text-align: center;
+    border-radius: 12px;
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.cta-btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover for emphasis */
+}
+
+.cta-btn:active {
+    background-color: #003f7f; /* Even darker blue when clicked */
+}
+
+/* Mobile and Desktop Responsive */
+@media screen and (max-width: 768px) {
+    .cta-btn {
+        width: 100%; /* Full-width on smaller devices */
+        font-size: 1.2rem; /* Slightly smaller text on mobile */
+        padding: 18px; /* Adjust padding for smaller screens */
+    }
+}
+
+
+/* iFrame Container Styling */
+.iframe-container {
+    margin-top: 30px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+iframe {
+    border-radius: 8px;
+}
+
+/* Footer Styling */
+footer {
+    background-color: black;
+    color: red;
+    text-align: center;
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    font-size: 0.875rem; /* Medium size */
+}
+
+/* Mobile-Friendly / Responsive Design */
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 1.8rem; /* Adjusted for smaller screens */
+    }
+
+    h2 {
+        font-size: 1.3rem; /* Adjusted for smaller screens */
+    }
+
+    p {
+        font-size: 0.9rem; /* Adjusted for smaller screens */
+    }
+
+    .cta-btn {
+        font-size: 1rem; /* Adjusted for smaller screens */
+        width: 100%;
+    }
+
+    .iframe-container {
+        padding: 10px;
+    }
+}
+
+/* Prevent Zoom on Mobile Devices */
+html {
+    touch-action: manipulation;
+}

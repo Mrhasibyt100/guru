@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat with Auto Messages</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        #chat-container {
+            width: 90%;
+            max-width: 500px;
+            border: 1px solid #555;
+            background-color: #222;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #444;
+        }
+        #chat-box {
+            height: 300px;
+            overflow-y: auto;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #333;
+            border-radius: 5px;
+            background-color: #111;
+        }
+        .message {
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .user {
+            background-color: #444;
+        }
+        #controls {
+            display: flex;
+            gap: 5px;
+        }
+        #name-input, #message-input {
+            width: 40%;
+            padding: 10px;
+            border: 1px solid #333;
+            border-radius: 5px;
+            background-color: #111;
+            color: white;
+        }
+        #send-button {
+            width: 20%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007BFF;
+            color: white;
+            cursor: pointer;
+        }
+        #send-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div id="chat-container">
+        <div id="chat-box"></div>
+        <div id="controls">
+            <input type="text" id="name-input" placeholder="Your Name" />
+            <input type="text" id="message-input" placeholder="Type a message..." />
+            <button id="send-button">Send</button>
+        </div>
+    </div>
+
+    <script>
+        const chatBox = document.getElementById("chat-box");
+        const nameInput = document.getElementById("name-input");
+        const messageInput = document.getElementById("message-input");
+        const sendButton = document.getElementById("send-button");
+
+        const autoResponses = [
+            "Ohh great! its perfect!  ",
+            "I got a job. 🥰🥰🥰",
+            " easy , just submit email! 🤪🤪☺️",
+            "I take a new job from home 🫶🏻🫶🏻.",
+             "! thank you! 😘😘😘😘😘.",
+            "It's awesome! Great experience😵😵😵🥶🤧🤧🫨",
+            "First i think it spam, but no, its real! thanx!! ",
+            "Done successfully. I submitted 😘😘😘",
+            "I Got a job! Just Submitted My email  🥰🥰!",
+            "Unbelievable! ",
+            "Almost received A Job 💵💵💵",
+            "Today my luck is good.",
+            "! So Simple! 🤩🤩",
+           "Just a few Step to join!",
+              "The great job fro. home! – Wow!🤪🤪☺️😌☺️😌",
+              "Simple Steps, to join!",
+            "My Close Call with joining 🤩🤩",
+            "Wow, I love it! 💵"
+        ];
+
+        const usernames = ["John", "Sarah", "Alex", "Mia", "Chris", "Emma", "Sam", "seth",  "undertaker", "brok", "roman",  "ali", "maria",   "best man",  "rich",  "price john",  "king77", "themothy", "nobel-man", "bridon", "sean", "brokener", "cook", "lemon",   "costa roca",  "me american", "usa", "emily ambers", "mark", "devil", "roki", "xiras", "alok", "ruma", ];
+
+        let interval;
+
+        function addMessage(username, text) {
+            const message = document.createElement("div");
+            message.classList.add("message", "user");
+            message.innerHTML = `<strong>${username}:</strong> ${text}`;
+            chatBox.appendChild(message);
+            chatBox.scrollTop = chatBox.scrollHeight; // Scroll to the bottom
+        }
+
+        function generateAutoMessage() {
+            const randomUser = usernames[Math.floor(Math.random() * usernames.length)];
+            const randomResponse = autoResponses[Math.floor(Math.random() * autoResponses.length)];
+            addMessage(randomUser, randomResponse);
+        }
+
+        function startAutoMessages() {
+            interval = setInterval(generateAutoMessage, 1300); // Every 2 seconds
+        }
+
+        sendButton.addEventListener("click", () => {
+            const userName = nameInput.value.trim() || "Anonymous";
+            const userMessage = messageInput.value.trim();
+
+            if (userMessage) {
+                addMessage(userName, userMessage);
+                messageInput.value = "";
+            }
+        });
+
+        // Start generating auto messages
+        startAutoMessages();
+    </script>
+</body>
+</html>
